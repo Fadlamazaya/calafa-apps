@@ -125,21 +125,24 @@
                     <div class="alert alert-danger text-center">Login Gagal!</div>
                 @endif
 
-                <form action="{{ route('auth') }}" method="POST">
+                <form action="{{ route('auth.login') }}" method="POST">
                     @csrf
+
                     <div class="mb-4">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" name="email" required
                             value="{{ old('email') }}" placeholder="Enter your email">
                     </div>
+
                     <div class="mb-4">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password" required
                             placeholder="Enter your password">
                     </div>
+
                     <div class="d-grid">
                         <button type="submit" class="btn btn-primary btn-block">Login</button>
-                        <a href="{{ route('redirect.google') }}" class="btn btn-secondary w-100 mt-3"> Login with Google </a>
+                        
                     </div>
                 </form>
             </div>
