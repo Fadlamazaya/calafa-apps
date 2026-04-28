@@ -72,7 +72,7 @@ class PesananController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $param1)
     {
         $pageData['dataPesanan'] = Pesanan::findOrFail($param1);
         return view('admin.pesanan.edit', $pageData);
