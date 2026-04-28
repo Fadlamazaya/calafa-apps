@@ -29,7 +29,7 @@
 
         .image-container {
             width: 50%;
-            background-image: url('{{ asset("assets-admin/img/brand/logocalafa.png") }}');
+            background-image: url('{{ asset('assets-admin/img/brand/logocalafa.png') }}');
             background-size: cover;
             background-position: center;
         }
@@ -110,28 +110,31 @@
                     </div>
                 @endif
 
-                @if(session('error'))
+                @if (session('error'))
                     <div class="alert alert-danger">{{ session('error') }}</div>
                 @endif
 
-                @if(session('result') == 'success')
+                @if (session('result') == 'success')
                     <div class="alert alert-success text-center">Login Berhasil!</div>
                 @elseif(session('result') == 'error')
                     <div class="alert alert-danger text-center">Login Gagal!</div>
                 @endif
 
-                <form action="{{ route('login') }}" method="POST">
+                <form action="{{ route('auth.login') }}" method="POST">
                     @csrf
+
                     <div class="mb-4">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" name="email" required
                             value="{{ old('email') }}" placeholder="Enter your email">
                     </div>
+
                     <div class="mb-4">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password" required
                             placeholder="Enter your password">
                     </div>
+
                     <div class="d-grid">
                         <button type="submit" class="btn btn-primary btn-block">Login</button>
                     </div>
