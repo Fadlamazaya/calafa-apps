@@ -51,7 +51,7 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 |--------------------------------------------------------------------------
 */
 
-// Route::group(['middleware' => ['checkislogin']], function () {
+Route::group(['middleware' => ['checkislogin']], function () {
 
     // DASHBOARD
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -115,7 +115,7 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
     Route::get('/user/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
     Route::post('/user/update', [UserController::class, 'update'])->name('user.update');
     Route::get('/user/destroy/{id}', [UserController::class, 'destroy'])->name('user.destroy');
-// });
+});
 
 /*
 |--------------------------------------------------------------------------

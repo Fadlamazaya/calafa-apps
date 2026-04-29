@@ -136,7 +136,7 @@
                         <a class="nav-link" href="{{ url('/menu') }}">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('dashboard') }}">Dashboard Admin</a>
+                        <a class="nav-link" href="{{ route('auth') }}">Dashboard Admin</a>
                     </li>
                 </ul>
             </div>
